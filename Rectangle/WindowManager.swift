@@ -42,6 +42,20 @@ class WindowManager {
         )
     }
     
+    func toggleCapsLock() {
+        var ioConnect: io_connect_t = .init(0)
+        let ioService = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching(kIOHIDSystemClass))
+        IOServiceOpen(ioService, mach_task_self_, UInt32(kIOHIDParamConnectType), &ioConnect)
+
+        var modifierLockState = false
+        IOHIDGetModifierLockState(ioConnect, Int32(kIOHIDCapsLockState), &modifierLockState)
+
+        modifierLockState.toggle()
+        IOHIDSetModifierLockState(ioConnect, Int32(kIOHIDCapsLockState), modifierLockState)
+
+        IOServiceClose(ioConnect)
+    }
+    
     func execute(_ parameters: ExecutionParameters) {
         guard let frontmostWindowElement = parameters.windowElement ?? AccessibilityElement.getFrontWindowElement(),
               let windowId = parameters.windowId ?? frontmostWindowElement.getWindowId()
@@ -51,6 +65,11 @@ class WindowManager {
         }
         
         let action = parameters.action
+        
+        if action == .capslock {
+            toggleCapsLock()
+            return
+        }
         
         if action == .restore {
             if let restoreRect = AppDelegate.windowHistory.restoreRects[windowId] {

@@ -94,7 +94,8 @@ enum WindowAction: Int, Codable {
     halveWidthLeft = 78,
     halveWidthRight = 79,
     largerWidth = 80,
-    smallerWidth = 81
+    smallerWidth = 81,
+    capslock = 82
 
     // Order matters here - it's used in the menu
     static let active = [leftHalf, rightHalf, centerHalf, topHalf, bottomHalf,
@@ -117,7 +118,8 @@ enum WindowAction: Int, Codable {
                          halveHeightUp, halveHeightDown, halveWidthLeft, halveWidthRight,
                          tileAll, cascadeAll,
                          leftTodo, rightTodo,
-                         cascadeActiveApp
+                         cascadeActiveApp,
+                         capslock
     ]
 
     func post() {
@@ -230,6 +232,7 @@ enum WindowAction: Int, Codable {
         case .centerProminently: return "centerProminently"
         case .largerWidth: return "largerWidth"
         case .smallerWidth: return "smallerWidth"
+        case .capslock: return "capsLock"
         }
     }
 
@@ -368,6 +371,8 @@ enum WindowAction: Int, Codable {
             return nil
         case .centerProminently, .largerWidth, .smallerWidth:
             return nil
+        case .capslock:
+            return nil
         }
 
         return NSLocalizedString(key, tableName: "Main", value: value, comment: "")
@@ -461,6 +466,7 @@ enum WindowAction: Int, Codable {
         case .centerThird: return Shortcut( ctrl|alt, kVK_ANSI_F )
         case .lastTwoThirds: return Shortcut( ctrl|alt, kVK_ANSI_T )
         case .lastThird: return Shortcut( ctrl|alt, kVK_ANSI_G )
+        case .capslock: return Shortcut( ctrl|cmd, kVK_ANSI_E)
         default: return nil
         }
     }
@@ -544,6 +550,7 @@ enum WindowAction: Int, Codable {
         case .centerProminently: return NSImage()
         case .largerWidth: return NSImage()
         case .smallerWidth: return NSImage()
+        case .capslock: return NSImage()
         }
     }
 
@@ -587,6 +594,8 @@ enum WindowAction: Int, Codable {
         case .maximizeHeight:
             return Defaults.applyGapsToMaximizeHeight.userDisabled ? .none : .vertical;
         case .almostMaximize, .previousDisplay, .nextDisplay, .larger, .smaller, .largerWidth, .smallerWidth, .center, .centerProminently, .restore, .specified, .reverseAll, .tileAll, .cascadeAll, .cascadeActiveApp:
+            return .none
+        case .capslock:
             return .none
         }
     }
