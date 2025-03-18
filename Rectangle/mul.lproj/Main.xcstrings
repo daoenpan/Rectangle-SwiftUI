@@ -2251,6 +2251,18 @@
         }
       }
     },
+    "2yn-Aw-7zG.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Caps Lock\"; ObjectID = \"2yn-Aw-7zG\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Caps Lock"
+          }
+        }
+      }
+    },
     "2Zm-fl-PcC.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Repeated commands\"; ObjectID = \"2Zm-fl-PcC\";",
       "extractionState" : "extracted_with_value",
@@ -31934,6 +31946,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "连字"
+          }
+        }
+      }
+    },
+    "O7W-PR-YGW.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Caps Lock\"; ObjectID = \"O7W-PR-YGW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Caps Lock"
           }
         }
       }
