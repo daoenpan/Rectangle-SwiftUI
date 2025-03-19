@@ -3,6 +3,7 @@
 [![Build](https://github.com/rxhanson/Rectangle/actions/workflows/build.yml/badge.svg)](https://github.com/rxhanson/Rectangle/actions/workflows/build.yml)
 
 Rewrite Rectangle with SwiftUI.
+Create dev branch.
 
 Rectangle is a window management app based on Spectacle, written in Swift.
 
