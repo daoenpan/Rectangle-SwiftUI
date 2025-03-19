@@ -235,8 +235,8 @@
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="hf9-TP-K3t"/>
-                        <menuItem title="Caps Lock" keyEquivalent="e" id="2yn-Aw-7zG">
-                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                        <menuItem title="Caps Lock" keyEquivalent="u" id="2yn-Aw-7zG">
+                            <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES"/>
                             <connections>
                                 <action selector="toggleCapsLock:" target="Voe-Tx-rLC" id="Rxe-rQ-jze"/>
                             </connections>
@@ -284,8 +284,8 @@
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="9x0-IB-BiQ"/>
-                        <menuItem title="Caps Lock" keyEquivalent="e" id="O7W-PR-YGW">
-                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                        <menuItem title="Caps Lock" keyEquivalent="u" id="O7W-PR-YGW">
+                            <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES"/>
                             <connections>
                                 <action selector="toggleCapsLock:" target="Voe-Tx-rLC" id="QHC-7C-lg3"/>
                             </connections>

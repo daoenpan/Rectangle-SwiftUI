@@ -15,6 +15,7 @@ fileprivate let alt = NSEvent.ModifierFlags.option.rawValue
 fileprivate let ctrl = NSEvent.ModifierFlags.control.rawValue
 fileprivate let shift = NSEvent.ModifierFlags.shift.rawValue
 fileprivate let cmd = NSEvent.ModifierFlags.command.rawValue
+fileprivate let fn = NSEvent.ModifierFlags.function.rawValue
 
 enum WindowAction: Int, Codable {
     case leftHalf = 0,
@@ -466,7 +467,7 @@ enum WindowAction: Int, Codable {
         case .centerThird: return Shortcut( ctrl|alt, kVK_ANSI_F )
         case .lastTwoThirds: return Shortcut( ctrl|alt, kVK_ANSI_T )
         case .lastThird: return Shortcut( ctrl|alt, kVK_ANSI_G )
-        case .capslock: return Shortcut( ctrl|cmd, kVK_ANSI_E)
+        case .capslock: return Shortcut( ctrl|alt, kVK_ANSI_U)
         default: return nil
         }
     }
