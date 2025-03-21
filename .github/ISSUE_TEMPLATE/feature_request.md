@@ -6,7 +6,7 @@ labels: 'enhancement'
 assignees: ''
 contact_links:
   - name: Rectangle Discussions
-    url: https://github.com/rxhanson/Rectangle/discussions
+    url: https://github.com/daoenpan/Rectangle-SwiftUI/discussions
     about: Please discuss feature ideas here.
 ---
 
