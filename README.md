@@ -13,17 +13,9 @@ Rectangle is a window management app based on Spectacle, written in Swift.
 
 ## System Requirements
 
-Rectangle supports macOS v10.15+. The last version that is supported for macOS 10.13 and 10.14 is https://github.com/rxhanson/Rectangle/releases/tag/v0.73.
+Rectangle supports macOS v13+.
 
 ## Installation
-
-You can download the latest dmg from <https://rectangleapp.com> or the [Releases page](https://github.com/rxhanson/Rectangle/releases).
-
-Or install with brew cask:
-
-```bash
-brew install --cask rectangle
-```
 
 ## How to use it
 
@@ -131,7 +123,8 @@ Or, this can be done with the following steps instead of the tccutil terminal co
 
 There are buttons for importing and exporting the config as a JSON file in the settings tab of the preferences window. 
 
-Upon launch, Rectangle will load a config file at `~/Library/Application Support/Rectangle/RectangleConfig.json` if it is present and will rename that file with a time/date stamp so that it isn't read on subsequent launches.
+Upon launch, Rectangle wi
+ll load a config file at `~/Library/Application Support/Rectangle/RectangleConfig.json` if it is present and will rename that file with a time/date stamp so that it isn't read on subsequent launches.
 
 ## Preferences Storage
 
@@ -168,13 +161,9 @@ brew uninstall --zap rectangle
 
 ---
 
-## Contributing
-
-Logic from Rectangle is used in the [Multitouch](https://multitouch.app) app. The [Rectangle Pro](https://rectangleapp.com/pro) app is entirely built on top of Rectangle. If you contribute significant code or localizations that get merged into Rectangle, send me an email for a free license of Multitouch or Rectangle Pro. Contributors to Sparkle, MASShortcut, or Spectacle can also receive free Multitouch or Rectangle Pro licenses.
-
 ### Localization
 
-If you would like to contribute to localization, all of the translations are held in the Main.strings per language. If you would like to add a localization but one doesn't currently exist and you don't know how to create one, create an issue and a translation file can be initialized.
+If you would like to contribute to localization, all the translations are held in the Main.strings per language. If you would like to add a localization but one doesn't currently exist and you don't know how to create one, create an issue and a translation file can be initialized.
 
 Pull requests for new localizations or improvements on existing localizations are welcome.
 
