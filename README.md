@@ -1,7 +1,5 @@
 # Rectangle-SwiftUI
 
-[![Build](https://github.com/rxhanson/Rectangle/actions/workflows/build.yml/badge.svg)](https://github.com/rxhanson/Rectangle/actions/workflows/build.yml)
-
 Rewrite Rectangle with SwiftUI.
 
 # News
