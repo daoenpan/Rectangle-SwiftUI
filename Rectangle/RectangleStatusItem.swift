@@ -42,7 +42,7 @@ class RectangleStatusItem {
         added = true
         nsStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         nsStatusItem?.menu = self.statusMenu
-        nsStatusItem?.button?.image = NSImage(named: "cards")
+        nsStatusItem?.button?.image = NSImage(named: "window")
         nsStatusItem?.behavior = .removalAllowed
         isVisibleObserver = nsStatusItem?.observe(\.isVisible, options: [.old, .new]) { nsStatusItem, change in
             if change.oldValue == true && change.newValue == false {
