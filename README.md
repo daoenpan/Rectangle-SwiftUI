@@ -4,6 +4,11 @@
 
 Rewrite Rectangle with SwiftUI.
 
+# News
+
+- Strip out excerpts from Apple Books
+- Toggle Caps Lock
+
 Rectangle is a window management app based on Spectacle, written in Swift.
 
 ![Screenshot](https://user-images.githubusercontent.com/13651296/183785536-a67a2e2a-7c55-4c19-9bf8-482e734b1632.png)
