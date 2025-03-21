@@ -39,6 +39,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var viewLoggingMenuItem: NSMenuItem!
     @IBOutlet weak var quitMenuItem: NSMenuItem!
     
+    private let pasteboardWatcher = PasteboardWatcher()
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         Defaults.loadFromSupportDir()
         if let lastVersion = Defaults.lastVersion.value,
@@ -101,6 +103,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         prevActiveAppObservation = NSWorkspace.shared.observe(\.frontmostApplication, options: .old) { workspace, change in
             self.prevActiveApp = change.oldValue ?? nil
         }
+        
+        pasteboardWatcher.startMonitorBook()
     }
     
     func applicationWillBecomeActive(_ notification: Notification) {
